@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/CustomButton.qml</file>
+        <file>qml/CustomTextInput.qml</file>
+        <file>qml/CustomToolBar.qml</file>
+        <file>qml/listViewMgr.js</file>
+        <file>qml/LoginDialog.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/RateListView.qml</file>
+        <file>qml/TestList.qml</file>
+        <file>qml/Waiter.qml</file>
+        <file>qml/Rater.qml</file>
+        <file>qml/Settings.qml</file>
+        <file>qml/ColorPicketItem.qml</file>
+        <file>qml/RatePageButtons.qml</file>
+        <file>qml/RateButtons.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/poster.jpg</file>
+        <file>images/heart.png</file>
+        <file>images/like.png</file>
+        <file>images/recom_ico.png</file>
+    </qresource>
+</RCC>
