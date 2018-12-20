@@ -5,6 +5,7 @@ import QtQuick.Controls 1.3
 import QtQuick.Controls.Styles 1.3
 import QtGraphicalEffects 1.0
 
+
 Rectangle {
     property string imageSource: ""
     property string description: ""

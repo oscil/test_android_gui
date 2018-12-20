@@ -65,9 +65,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
           self.send_response(200)
           self.send_header('Content-type', 'application/json')
           self.end_headers()
-          self.wfile.write(str.encode('{\"itemId\":\"'+str(itemid)+'\",\"name\":\"Ololol\",\"poster\":\"file:///h:/HomeDevelopment/PyProjects/RecomServer/posters/'+str(itemid)+'.jpg\"}'))
+          # self.wfile.write(str.encode('{\"itemId\":\"'+str(itemid)+'\",\"name\":\"Ololol\",\"poster\":\"file://../PyProjects/RecomServer/posters/'+str(itemid)+'.jpg\"}'))
+          self.wfile.write(str.encode('{\"itemId\":\"' + str(
+              itemid) + '\",\"name\":\"Name coud be here...\",\"description\":\"Description of the film....\",\"poster\":\"file:///' + os.getcwd() +'/posters/' + str(
+              itemid) + '.jpg\"}'))
           return
 
 
-httpd = socketserver.TCPServer(('', 8080), Handler)
+httpd = socketserver.TCPServer(('', 9999), Handler)
 httpd.serve_forever()

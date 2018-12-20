@@ -1,3 +1,5 @@
+#include <QCoreApplication>
+
 #include "guimanager.h"
 
 GUIManager* GUIManager::m_instance = NULL;
@@ -12,6 +14,7 @@ GUIManager::GUIManager(QObject *parent) :
     m_rootContext =  m_engine->rootContext();
     m_rootContext->setContextProperty("GUIMgr",this);
     m_engine->load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+    m_engine->rootContext()->setContextProperty("applicationDirPath", QCoreApplication::applicationDirPath());
     m_rootObject = m_engine->rootObjects()[0];
 
     connect(m_rootObject, SIGNAL(signalRegistrationMain(QString, QString)),

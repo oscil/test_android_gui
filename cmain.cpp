@@ -6,7 +6,7 @@ cmain::cmain(QObject *parent) :
 {
     //TODO сделать так, чтобы при большом входном потоке ничего не падало (например 1000 элементов подряд)
     //TODO сделать проверку на оставшиеся элементы при пропуске
-    QString serverAddress = m_settings.value("serveraddress", "http://172.16.0.55:8080").toString();
+    QString serverAddress = m_settings.value("serveraddress", "http://127.0.0.1:9999").toString();
     QString loginString = m_settings.value("login", "").toString();
     QString passwordString = m_settings.value("password", "").toString();
 
@@ -17,8 +17,7 @@ cmain::cmain(QObject *parent) :
         m_gui->passwordString(passwordString);
 
     m_core = CCore::instance();
-    m_core->setServerName("http://91.224.133.172:8080");
-//    m_core->setServerName("http://127.0.0.1:8080");
+    m_core->setServerName("http://127.0.0.1:9999");
     m_gui->setItemsRateModel(m_core->getItemsRateModel());
     m_gui->setItemsRecommendModel(m_core->getItemsRecommendModel());
 
